@@ -1,8 +1,8 @@
 ---
-
+import '../styles/global.css';
 ---
 
-<html lang="en">
+<html lang="en" data-theme="luxury">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -10,238 +10,148 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Jelly Labs - Integrated Systems Design</title>
 		<meta name="description" content="Jelly Labs Limited - Integrated Systems Design Company" />
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
-			}
-			
-			body {
-				font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-				line-height: 1.6;
-				color: #333;
-				background: #fff;
-			}
-			
-			.container {
-				max-width: 1200px;
-				margin: 0 auto;
-				padding: 0 20px;
-			}
-			
-			header {
-				background: #fff;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-				position: fixed;
-				width: 100%;
-				top: 0;
-				z-index: 1000;
-			}
-			
-			nav {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding: 1rem 0;
-			}
-			
-			.logo {
-				font-size: 1.5rem;
-				font-weight: 700;
-				color: #2563eb;
-			}
-			
-			.nav-links {
-				display: flex;
-				list-style: none;
-				gap: 2rem;
-			}
-			
-			.nav-links a {
-				text-decoration: none;
-				color: #333;
-				font-weight: 500;
-				transition: color 0.3s;
-			}
-			
-			.nav-links a:hover {
-				color: #2563eb;
-			}
-			
-			main {
-				margin-top: 80px;
-			}
-			
-			.hero {
-				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-				color: white;
-				padding: 6rem 0;
-				text-align: center;
-			}
-			
-			.hero h1 {
-				font-size: 3rem;
-				margin-bottom: 1rem;
-				font-weight: 700;
-			}
-			
-			.hero p {
-				font-size: 1.25rem;
-				margin-bottom: 2rem;
-				opacity: 0.9;
-			}
-			
-			.cta-button {
-				display: inline-block;
-				background: #fff;
-				color: #2563eb;
-				padding: 12px 30px;
-				border-radius: 6px;
-				text-decoration: none;
-				font-weight: 600;
-				transition: transform 0.3s;
-			}
-			
-			.cta-button:hover {
-				transform: translateY(-2px);
-			}
-			
-			.services {
-				padding: 4rem 0;
-				background: #f8fafc;
-			}
-			
-			.services h2 {
-				text-align: center;
-				font-size: 2.5rem;
-				margin-bottom: 3rem;
-				color: #1e293b;
-			}
-			
-			.services-grid {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-				gap: 2rem;
-			}
-			
-			.service-card {
-				background: white;
-				padding: 2rem;
-				border-radius: 10px;
-				box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-				text-align: center;
-				transition: transform 0.3s;
-			}
-			
-			.service-card:hover {
-				transform: translateY(-5px);
-			}
-			
-			.service-card h3 {
-				font-size: 1.5rem;
-				margin-bottom: 1rem;
-				color: #2563eb;
-			}
-			
-			.about {
-				padding: 4rem 0;
-			}
-			
-			.about h2 {
-				text-align: center;
-				font-size: 2.5rem;
-				margin-bottom: 2rem;
-				color: #1e293b;
-			}
-			
-			.about-content {
-				max-width: 800px;
-				margin: 0 auto;
-				text-align: center;
-				font-size: 1.1rem;
-				line-height: 1.8;
-			}
-			
-			footer {
-				background: #1e293b;
-				color: white;
-				text-align: center;
-				padding: 2rem 0;
-			}
-			
-			@media (max-width: 768px) {
-				.nav-links {
-					display: none;
-				}
-				
-				.hero h1 {
-					font-size: 2rem;
-				}
-				
-				.services-grid {
-					grid-template-columns: 1fr;
-				}
-			}
-		</style>
 	</head>
-	<body>
-		<header>
-			<nav class="container">
-				<div class="logo">Jelly Labs</div>
-				<ul class="nav-links">
-					<li><a href="#home">Home</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-			</nav>
+	<body class="min-h-screen bg-base-100">
+		<header class="navbar bg-base-100 shadow-lg fixed top-0 z-50">
+			<div class="container mx-auto">
+				<div class="navbar-start">
+					<div class="dropdown">
+						<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+							</svg>
+						</div>
+						<ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+					<a class="btn btn-ghost text-xl font-bold text-primary">Jelly Labs</a>
+				</div>
+				<div class="navbar-center hidden lg:flex">
+					<ul class="menu menu-horizontal px-1">
+						<li><a href="#home" class="btn btn-ghost">Home</a></li>
+						<li><a href="#services" class="btn btn-ghost">Services</a></li>
+						<li><a href="#about" class="btn btn-ghost">About</a></li>
+						<li><a href="#contact" class="btn btn-ghost">Contact</a></li>
+					</ul>
+				</div>
+				<div class="navbar-end">
+					<a href="#contact" class="btn btn-primary">Get Started</a>
+				</div>
+			</div>
 		</header>
 
-		<main>
-			<section class="hero" id="home">
-				<div class="container">
-					<h1>Integrated Systems Design</h1>
-					<p>Innovative solutions for complex technical challenges</p>
-					<a href="#services" class="cta-button">Explore Our Services</a>
+		<main class="pt-16">
+			<section id="home" class="hero min-h-screen bg-gradient-to-br from-primary to-secondary">
+				<div class="hero-content text-center">
+					<div class="max-w-4xl">
+						<h1 class="text-5xl font-bold mb-6 text-primary-content">
+							Integrated Systems Design
+						</h1>
+						<p class="text-xl mb-8 text-primary-content/90">
+							Innovative solutions for complex technical challenges
+						</p>
+						<a href="#services" class="btn btn-accent btn-lg">
+							Explore Our Services
+						</a>
+					</div>
 				</div>
 			</section>
 
-			<section class="services" id="services">
-				<div class="container">
-					<h2>Our Services</h2>
-					<div class="services-grid">
-						<div class="service-card">
-							<h3>System Architecture</h3>
-							<p>Designing scalable and robust system architectures that meet your specific requirements and performance needs.</p>
+			<section id="services" class="py-20 bg-base-200">
+				<div class="container mx-auto px-4">
+					<h2 class="text-4xl font-bold text-center mb-12 text-base-content">Our Services</h2>
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+						<div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+							<div class="card-body">
+								<div class="text-primary text-4xl mb-4">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+									</svg>
+								</div>
+								<h3 class="card-title text-primary">System Architecture</h3>
+								<p class="text-base-content/80">Designing scalable and robust system architectures that meet your specific requirements and performance needs.</p>
+							</div>
 						</div>
-						<div class="service-card">
-							<h3>Integration Solutions</h3>
-							<p>Seamlessly connecting disparate systems and technologies to create unified, efficient workflows.</p>
+						<div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+							<div class="card-body">
+								<div class="text-primary text-4xl mb-4">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a1 1 0 01-1-1V9a1 1 0 011-1h1a2 2 0 100-4H4a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 001-1v-1a2 2 0 114 0z" />
+									</svg>
+								</div>
+								<h3 class="card-title text-primary">Integration Solutions</h3>
+								<p class="text-base-content/80">Seamlessly connecting disparate systems and technologies to create unified, efficient workflows.</p>
+							</div>
 						</div>
-						<div class="service-card">
-							<h3>Technical Consulting</h3>
-							<p>Expert guidance on technology decisions, implementation strategies, and optimization approaches.</p>
+						<div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300">
+							<div class="card-body">
+								<div class="text-primary text-4xl mb-4">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+									</svg>
+								</div>
+								<h3 class="card-title text-primary">Technical Consulting</h3>
+								<p class="text-base-content/80">Expert guidance on technology decisions, implementation strategies, and optimization approaches.</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="about" id="about">
-				<div class="container">
-					<h2>About Jelly Labs</h2>
-					<div class="about-content">
-						<p>Jelly Labs Limited is a specialized integrated systems design company focused on delivering innovative solutions for complex technical challenges. We combine deep technical expertise with creative problem-solving to help organizations build, integrate, and optimize their technology systems.</p>
-						<p>Our team of experienced engineers and consultants work closely with clients to understand their unique requirements and deliver tailored solutions that drive business success.</p>
+			<section id="about" class="py-20 bg-base-100">
+				<div class="container mx-auto px-4">
+					<div class="text-center max-w-4xl mx-auto">
+						<h2 class="text-4xl font-bold mb-8 text-base-content">About Jelly Labs</h2>
+						<div class="prose prose-lg mx-auto text-base-content/80">
+							<p class="text-lg mb-6">
+								Jelly Labs Limited is a specialized integrated systems design company focused on delivering innovative solutions for complex technical challenges. We combine deep technical expertise with creative problem-solving to help organizations build, integrate, and optimize their technology systems.
+							</p>
+							<p class="text-lg">
+								Our team of experienced engineers and consultants work closely with clients to understand their unique requirements and deliver tailored solutions that drive business success.
+							</p>
+						</div>
+						<div class="mt-12">
+							<div class="stats stats-vertical lg:stats-horizontal shadow">
+								<div class="stat">
+									<div class="stat-title">Years Experience</div>
+									<div class="stat-value text-primary">10+</div>
+									<div class="stat-desc">In systems design</div>
+								</div>
+								<div class="stat">
+									<div class="stat-title">Projects</div>
+									<div class="stat-value text-primary">100+</div>
+									<div class="stat-desc">Successfully delivered</div>
+								</div>
+								<div class="stat">
+									<div class="stat-title">Clients</div>
+									<div class="stat-value text-primary">50+</div>
+									<div class="stat-desc">Across industries</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
-		<footer id="contact">
-			<div class="container">
-				<p>&copy; 2024 Jelly Labs Limited. All rights reserved.</p>
+		<footer id="contact" class="footer footer-center p-10 bg-base-200 text-base-content">
+			<div>
+				<div class="grid grid-flow-col gap-4">
+					<a class="link link-hover">Privacy Policy</a>
+					<a class="link link-hover">Terms of Service</a>
+					<a class="link link-hover">Contact</a>
+				</div>
+			</div>
+			<div>
+				<p class="font-bold text-lg">Jelly Labs Limited</p>
 				<p>Integrated Systems Design Company</p>
+			</div>
+			<div>
+				<p>&copy; 2024 Jelly Labs Limited. All rights reserved.</p>
 			</div>
 		</footer>
 	</body>
